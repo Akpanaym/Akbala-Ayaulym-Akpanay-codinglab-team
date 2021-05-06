@@ -12,7 +12,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <style type="text/css">
     body{
-  
+
 
     background-image: url('  https://images.unsplash.com/photo-1452882628481-6a2da9481239?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80 ');
 
@@ -56,7 +56,7 @@
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
+        <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="file:///Users/akbalatleugalieva/Desktop/logo.png">
         <img src="file:///Users/akbalatleugalieva/Desktop/logo.png">
@@ -66,8 +66,8 @@
       <ul class="nav navbar-nav">
         <li class="active"><a href="index.php">Home</a></li>
         <li><a href="#">About</a></li>
-        <li><a href="#">Courses</a></li>
-        <li><a href="#">Tutors</a></li>
+        <li><a href="courses.php">Courses</a></li>
+        <li><a href="tutors.php">Tutors</a></li>
         <li><a href="contact.php">Contact us</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -103,7 +103,7 @@
 </body>
 </html>
 
-<?php 
+<?php
 if(isset($_POST['sb'])){
     include "dbclass.php";
     $course=$_POST['course'];
@@ -113,6 +113,6 @@ if(isset($_POST['sb'])){
       $email=$_POST['email'];
       $obj=new Database();
 
-$obj->saveRecords2($course,$fname,$lname,$phone,$email);  // it is a function to save the data from the form 
+$obj->saveRecords2($course,$fname,$lname,$phone,$email);  // it is a function to save the data from the form
 }
 ?>
